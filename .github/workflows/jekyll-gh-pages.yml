@@ -33,8 +33,9 @@ jobs:
         run: yarn
       - name: Build
         # uses: actions/jeksyll-build-pages@v1
-        run: yarn build
-        run: cp ./dist/* ./_site
+        run: |
+          yarn build
+          cp ./dist/* ./_site
         # with:
         #   source: ./dist
         #   destination: ./_site
